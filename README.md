@@ -1,13 +1,12 @@
 # Carrierwave::Zipline
-
-TODO: Write a gem description
+A simple in memory zipfile processing gem usefull for doing zip upload of images with e.g. carrierwave.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'carrierwave-zipline'
+gem 'carrierwave-zipline', :require => 'carrierwave/zipline'
 ```
 
 And then execute:
@@ -29,3 +28,4 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+=======
