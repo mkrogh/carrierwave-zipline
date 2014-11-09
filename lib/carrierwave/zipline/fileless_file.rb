@@ -7,6 +7,10 @@ module Carrierwave
         super(file)
         @original_filename = name
       end
+
+      def ext
+        File.extname(@original_filename).delete(".").downcase
+      end
     end
   end
 end

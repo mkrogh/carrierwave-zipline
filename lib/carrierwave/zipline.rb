@@ -27,7 +27,7 @@ module Carrierwave
     private
     def self.is_zip?(file)
       #Better check than .zip?
-      File.extname(file.original_filename) == ".zip"
+      File.extname(file.original_filename).downcase == ".zip"
     end
   end
 end
