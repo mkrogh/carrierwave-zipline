@@ -42,5 +42,14 @@ describe Carrierwave::Zipline do
       expect(list[2]).to start_with  "polaroid"
     end
   end
+
+  context "when processing osx zip with images" do
+    let(:file) {FakeUpload.new("spec/files/osx-archive.zip")}
+
+    it "should contain 3 files" do
+      total = zipline.process(file) {|f| true}
+      expect(total).to be == 3
+    end
+  end
 end
 

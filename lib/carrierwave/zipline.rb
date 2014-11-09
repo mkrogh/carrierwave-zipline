@@ -15,6 +15,7 @@ module Carrierwave
       if zip_file and is_zip?(zip_file)
         Zippy.open(zip_file.tempfile) do |zip|
           Zippy.list(zip_file.tempfile).sort().each do |name|
+            next if name =~ /__MACOSX|^\./
             if yield(FilelessFile.new(zip[name], name))
               nbr_files +=1
             end
